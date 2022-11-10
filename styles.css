@@ -7,3 +7,7 @@ table, th, td {
 .colors{
     display: flex;
 }
+
+.all{
+    display: flex;
+}
