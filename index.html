@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.26.1/axios.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <h1>All Colors</h1>
+    <div class="all_colors">
+        <script class="allColorsTemplate" type="text/template-x">
+            {{#each colors}}
+           <ul> <li> {{this}} <br> </li> </ul> 
+            {{/each}}
+        </script>
+    </div>
+
+    <h1>All Brands</h1>
+    <div class="brands">
+        <script class="allBrandsTemplate" type="text/template-x">
+            {{#each brands}}
+           <ul> <li> {{this}} <br> </li> </ul> 
+            {{/each}}
+        </script>
+    </div>
+
+    <h1> All Cars</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Make</th>
+                <th>Model</th>
+                <th>Colour</th>
+                <th>Price</th>
+                <th>Reg_Number</th>
+            </tr>
+        </thead>
+        <tbody class="cars">
+            <!-- Put data from the API in here -->
+            <script class="allCarsTemplate" type="text/template-x">
+                {{#each cars_results}}
+                <tr>
+                    <td>{{make}}</td>
+                    <td>{{model}}</td>
+                    <td>{{color}}</td>
+                    <td>{{price}}</td>
+                    <td>{{reg_number}}</td>                
+                </tr>
+                {{/each}}
+            </script>
+        </tbody>
+    </table>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
