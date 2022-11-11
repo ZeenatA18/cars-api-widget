@@ -54,7 +54,7 @@
 
     <div class="filter">
         <script class="filterMakeTemplate" type="text/template-x">
-
+            {{#if filtering}}
            <table>
               <thead>
                 <tr>
@@ -77,9 +77,10 @@
                 <td>{{reg_number}}</td>                
             </tr>
             {{/each}}
+            {{/if}}
 
             {{#unless filtering}}
-
+                <h2>None</h2>
             {{/unless}}
         </script>
         </tbody>

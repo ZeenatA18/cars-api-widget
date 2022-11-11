@@ -79,6 +79,8 @@ else if(color.value){
          })
      }
      else{
-        filter.innerHTML = "Please select a car brand or color!"
+        filter.innerHTML = "Please select a car brand or color or both! "
      }
+
+    
          })
