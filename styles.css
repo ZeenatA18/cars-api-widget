@@ -42,8 +42,12 @@ table, th, td {
 
 .filter{
     padding: 20px;
-    margin-left: 40%;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
 }
+
 
 .nav {
     background-color: dimgray;
