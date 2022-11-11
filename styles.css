@@ -11,3 +11,58 @@ table, th, td {
 .all{
     display: flex;
 }
+
+.brands{
+    padding: 20%;
+}
+
+.color{
+    padding: 20%;
+}
+
+.colorss{
+    margin-left: 20px;
+}
+
+.colorzz{
+    padding: 10px;
+}
+
+.submit{
+    margin-left: 50%;
+}
+
+.heading{
+    text-align: center;
+}
+
+.dropdown{
+    margin-left: 15%;
+}
+
+.filter{
+    padding: 20px;
+    margin-left: 40%;
+}
+
+.nav {
+    background-color: dimgray;
+    
+}
+
+.nav1 {
+    display: flex;
+    padding: 20px;
+}
+
+a{
+    padding: 20px;
+    text-decoration: none;
+    color: black;
+}
+
+a:hover{
+    padding: 20px;
+    background-color: aqua;
+    border-radius: 10%;
+}

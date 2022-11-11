@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.26.1/axios.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    
+    <div class="nav">
+        <nav class="nav1">
+            <a style="margin-left: 10px;" href="index.html">Cars API Widget</a>
+            <a style="margin-left: 10px;" href="filter.html">Car Filter Widget</a>
+        </nav>
+    </div>
+
+    <h1 class="heading"> Filter </h1>
+
+    <div class="dropdown">
+        <label class="brands">Choose a car brand:</label>
+
+        <select class="makes" name="brands"></select>
+        <script class="allBrandsTemplate" type="text/template-x">
+     <option value="">---brands---</option>
+      {{#each brands}}
+     <option value="{{this}}"> {{this}} </option>
+      {{/each}}
+    </script>
+
+        <br>
+
+        <div class="colorzz">
+            <label class="color">Choose a colors:</label>
+
+            <select class="colorss" name="color"></select>
+            <script class="allcolorsTemplate" type="text/template-x">
+     <option value="">---colors---</option>
+      {{#each colors}}
+     <option value="{{this}}"> {{this}} </option>
+      {{/each}}
+    </script>
+        </div>
+    </div>
+
+    <br>
+
+    <button type="submit" class="submit"> submit </button>
+
+    <div class="filter">
+        <script class="filterMakeTemplate" type="text/template-x">
+
+           <table>
+              <thead>
+                <tr>
+                    <th>Make</th>
+                    <th>Model</th>
+                    <th>Colour</th>
+                    <th>Price</th>
+                    <th>Reg_Number</th>
+                </tr>
+              </thead>
+            <tbody class="filterMake">
+                <!-- Put data from the API in here -->
+        
+            {{#each filtering}}
+            <tr>
+                <td>{{make}}</td>
+                <td>{{model}}</td>
+                <td>{{color}}</td>
+                <td>{{price}}</td>
+                <td>{{reg_number}}</td>                
+            </tr>
+            {{/each}}
+
+            {{#unless filtering}}
+
+            {{/unless}}
+        </script>
+        </tbody>
+        </table>
+    </div>
+
+    </div>
+
+
+    <script src="filter.js"></script>
+</body>
+
+</html>
